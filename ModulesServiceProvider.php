@@ -2,7 +2,7 @@
 
 namespace Herosoft\Modules;
 
-use Illuminate\Foundation\AliasLoader;
+//use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 use Herosoft\Modules\Stub;
 
@@ -48,13 +48,13 @@ class ModulesServiceProvider extends ServiceProvider
      */
     public function setupStubPath()
     {
-        $this->app->booted(function ($app) {
-            Stub::setBasePath(__DIR__.'/Commands/stubs');
+        //$this->app->booted(function ($app) {
+        Stub::setBasePath(__DIR__.'/Commands/stubs');
 
-            if ($app['modules']->config('stubs.enabled') === true) {
-                Stub::setBasePath($app['modules']->config('stubs.path'));
-            }
-        });
+        if (app('modules')->config('stubs.enabled') === true) {
+            Stub::setBasePath(app('modules')->config('stubs.path'));
+        }
+        //});
     }
 
     /**
@@ -64,9 +64,9 @@ class ModulesServiceProvider extends ServiceProvider
     {
         $configPath = __DIR__.'/src/config/config.php';
         $this->mergeConfigFrom($configPath, 'modules');
-        $this->publishes([
+        /*$this->publishes([
             $configPath => config_path('modules.php')
-        ], 'config');
+        ], 'config');*/
     }
 
     /**
@@ -82,7 +82,7 @@ class ModulesServiceProvider extends ServiceProvider
             'Module' => 'Herosoft\Modules\Facades\Module',
         ];
 
-        AliasLoader::getInstance($aliases)->register();
+        // AliasLoader::getInstance($aliases)->register();
     }
 
     /**
@@ -90,10 +90,10 @@ class ModulesServiceProvider extends ServiceProvider
      */
     protected function registerServices()
     {
-        $this->app->bindShared('modules', function ($app) {
+        $this->app->singleton('modules', function ($app) {
             $path = $app['config']->get('modules.paths.modules');
 
-            return new Repository($app, $path);
+            return new Repository(app(), $path);
         });
     }
 

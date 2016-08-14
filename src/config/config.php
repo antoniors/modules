@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'namespace' => 'Modules',
+    'namespace' => 'App\Modules',
 
     /*
     |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ return [
 
     'stubs' => [
         'enabled' => false,
-        'path' => base_path().'/vendor/pingpong/modules/src/Pingpong/Modules/Commands/stubs',
+        'path' => base_path().'/vendor/herosoft/modules/Commands/stubs',
         'files' => [
             'start' => 'start.php',
             'routes' => 'Http/routes.php',
@@ -62,7 +62,7 @@ return [
         |
         */
 
-        'modules' => base_path('modules'),
+        'modules' => base_path('app/Modules'),
         /*
         |--------------------------------------------------------------------------
         | Modules assets path
@@ -72,7 +72,7 @@ return [
         |
         */
 
-        'assets' => public_path('modules'),
+        //'assets' => public_path('modules'),
         /*
         |--------------------------------------------------------------------------
         | The migrations path
@@ -137,10 +137,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'pingpong-modules',
+        'vendor' => 'herosoft-modules',
         'author' => [
-            'name' => 'Pingpong Labs',
-            'email' => 'pingpong.labs@gmail.com',
+            'name' => 'herosoft Labs',
+            'email' => 'herosoft.labs@gmail.com',
         ],
     ],
     /*
@@ -153,7 +153,7 @@ return [
     */
     'cache' => [
         'enabled' => false,
-        'key' => 'pingpong-modules',
+        'key' => 'herosoft-modules',
         'lifetime' => 60,
     ],
 
