@@ -2,8 +2,8 @@
 
 namespace Herosoft\Modules;
 
-use Illuminate\Foundation\AliasLoader;
-use Illuminate\Foundation\Application;
+//use Illuminate\Foundation\AliasLoader;
+use Laravel\Lumen\Application;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 
@@ -233,10 +233,10 @@ class Module extends ServiceProvider
      */
     protected function registerAliases()
     {
-        $loader = AliasLoader::getInstance();
+        /*$loader = AliasLoader::getInstance();
         foreach ($this->get('aliases', []) as $aliasName => $aliasClass) {
             $loader->alias($aliasName, $aliasClass);
-        }
+        }*/
     }
 
     /**
