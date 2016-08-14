@@ -6,7 +6,7 @@ use Illuminate\Config\Repository as Config;
 use Illuminate\Console\Command as Console;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
-use Herosoft\Support\Stub;
+use Herosoft\Modules\Stub;
 use Herosoft\Modules\Repository;
 
 class ModuleGenerator extends Generator

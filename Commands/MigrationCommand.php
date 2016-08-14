@@ -5,7 +5,7 @@ namespace Herosoft\Modules\Commands;
 use Illuminate\Support\Str;
 use Herosoft\Generators\Migrations\NameParser;
 use Herosoft\Generators\Migrations\SchemaParser;
-use Herosoft\Support\Stub;
+use Herosoft\Modules\Stub;
 use Herosoft\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;

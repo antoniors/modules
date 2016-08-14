@@ -3,7 +3,7 @@
 namespace Herosoft\Modules\Commands;
 
 use Illuminate\Support\Str;
-use Herosoft\Support\Stub;
+use Herosoft\Modules\Stub;
 use Herosoft\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 

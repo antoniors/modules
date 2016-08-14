@@ -4,7 +4,7 @@ namespace Herosoft\Modules;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
-use Herosoft\Support\Stub;
+use Herosoft\Modules\Stub;
 
 class ModulesServiceProvider extends ServiceProvider
 {
