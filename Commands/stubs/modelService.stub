@@ -1,0 +1,69 @@
+<?php namespace Modules\$STUDLY_NAME$\Negocy;
+
+use Modules\$STUDLY_NAME$\Entities\$STUDLY_NAME$;
+use App\Negocy\NegocioInterface;
+use Modules\$STUDLY_NAME$\Repositories\$STUDLY_NAME$Repositorio;
+
+/**
+ * Class $STUDLY_NAME$Negocio
+ * @package Modules\$STUDLY_NAME$\Negocy
+ */
+class $STUDLY_NAME$Negocio implements NegocioInterface {
+
+    protected $$LOWER_NAME$Repositorio;
+
+    /**
+     * $STUDLY_NAME$Negocio constructor.
+     * @param $STUDLY_NAME$Repositorio $$LOWER_NAME$Repositorio
+     */
+    public function __construct($STUDLY_NAME$Repositorio $$LOWER_NAME$Repositorio) {
+        $this->$LOWER_NAME$Repositorio = $$LOWER_NAME$Repositorio;
+    }
+
+    /**
+     * Accion para el registro de los datos
+     *
+     * @param $request
+     * @return mixed
+     */
+    public function registrar( $request) {
+
+        return $this->$$LOWER_NAME$Repositorio->create(
+            $request
+        );
+
+    }
+
+    /**
+     * Accion para la actualización de los datos especificando un id
+     *
+     * @param $request
+     * @param $id
+     * @return mixed
+     */
+    public function actualizar( $request, $id) {
+
+
+        return $this->$$LOWER_NAME$Repositorio->update(
+            $request , $id
+        );
+
+
+    }
+
+    /**
+     * Accion para la eliminación (cancelacion) de los datos especificando un id
+     *
+     * @param $request
+     * @param $id
+     * @return mixed
+     */
+    public function eliminar($id){
+
+            return $this->$$LOWER_NAME$Repositorio->update(
+                ['estatus' => 'CA'] , $id
+            );
+
+    }
+
+}

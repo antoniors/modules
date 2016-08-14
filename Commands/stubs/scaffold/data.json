@@ -1,0 +1,44 @@
+[
+  {
+    "row": [
+      {
+        "col": 5,
+        "for": "nombre",
+        "label": "Nombre",
+        "id": "nombre",
+        "title": "Nombre del paciente"
+      },
+      {
+        "col": 5,
+        "for": "apellido_paterno",
+        "label": "Apellido Paterno",
+        "id": "apellido_paterno",
+        "title": "Apellido Paterno del paciente"
+      }
+    ]
+  },
+  {
+    "row": [
+      {
+        "label": "Apellido Materno",
+        "for": "apellido_materno",
+        "col": 5,
+        "id": "apellido_materno",
+        "title": "Apellido Materno del paciente",
+        "input-group": {
+          "left": "fa fa-calendar",
+          "right": "fa fa-calendar"
+        }
+      },
+      {
+        "label": "Sexo",
+        "for": "sexo",
+        "type": "select",
+        "col": 5,
+        "id": "sexo",
+        "title": "Sexo del paciente"
+      }
+    ]
+  }
+]
+

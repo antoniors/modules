@@ -1,0 +1,15 @@
+@extends('layouts.app')
+
+@section('content')
+
+<h1>Hello World</h1>
+
+<p>
+    This view is loaded from module: {!! config('$LOWER_NAME$.name') !!}
+</p>
+
+@stop
+
+@section('scripts')
+<script src="{{asset('bower_components/angular/angular.min.js')}}"></script>
+@stop

@@ -1,6 +1,16 @@
 <?php
 
-Route::group(['prefix' => '$LOWER_NAME$', 'namespace' => '$MODULE_NAMESPACE$\$STUDLY_NAME$\Http\Controllers'], function()
+
+Route::group(['middleware' => 'web', 'prefix' => '$STUDLY_NAME$/', 'namespace' => '$MODULE_NAMESPACE$\$STUDLY_NAME$\Http\Controllers'], function()
 {
-	Route::get('/', '$STUDLY_NAME$Controller@index');
+	Route::resource('$STUDLY_NAME$', '$STUDLY_NAME$Controller',
+	    ['names' =>
+                ['index' => '$STUDLY_NAME$.index',
+                'create' => '$STUDLY_NAME$.crear',
+                'store' => '$STUDLY_NAME$.registrar',
+                'show' => '$STUDLY_NAME$.obtener',
+                'edit' => '$STUDLY_NAME$.editar',
+                'update' => '$STUDLY_NAME$.actualizar',
+                'destroy' => '$STUDLY_NAME$.eliminar'],
+        ]);
 });

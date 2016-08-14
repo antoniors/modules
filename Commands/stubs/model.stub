@@ -1,8 +1,8 @@
 <?php namespace $NAMESPACE$;
    
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
 
-class $CLASS$ extends Model {
+class $CLASS$ extends BaseModel {
 
     protected $fillable = $FILLABLE$;
 

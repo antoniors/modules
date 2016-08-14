@@ -1,0 +1,21 @@
+<?php namespace Modules\$STUDLY_NAME$\Repositories;
+
+use App\Repositories\Repository;
+
+class $STUDLY_NAME$Repositorio extends Repository {
+
+    protected $campos = ['*'];
+    /**
+     * Specify Model class name
+     *
+     * @return mixed
+     */
+    function model()
+    {
+        return 'Modules\$STUDLY_NAME$\Entities\$STUDLY_NAME$';
+    }
+
+    public function listar() {
+        return $this->model->select($this->campos);
+    }
+}

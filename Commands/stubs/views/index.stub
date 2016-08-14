@@ -1,11 +1,33 @@
-@extends('$LOWER_NAME$::layouts.master')
+@extends('layouts.app')
 
 @section('content')
-	
-	<h1>Hello World</h1>
-	
-	<p>
-		This view is loaded from module: {!! config('$LOWER_NAME$.name') !!}
-	</p>
+<div ng-controller="$STUDLY_NAME$Controller">
 
-@endsection
+
+
+    <form action="registrar" action-submit>
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td><input ng-model="$LOWER_NAME$.nombre" /></td>
+            </tr>
+            <tr>
+                <td>Apellidos</td>
+                <td><input ng-model="$LOWER_NAME$.apellidos" /></td>
+            </tr>
+        </table>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <h1>Hello World</h1>
+
+    <p>
+        This view is loaded from module: {!! config('$LOWER_NAME$.name') !!}
+    </p>
+
+
+</div>
+@stop
+@section('scripts')
+<script src="{{asset('modules/$LOWER_NAME$/$LOWER_NAME$-min.js')}}"></script>
+@stop

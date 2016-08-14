@@ -1,0 +1,24 @@
+<?php namespace Modules\$MODULENAME$\Http\Requests;
+
+use App\Http\Requests\Request;
+
+class $MODULENAME$Validate extends Request {
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            //
+        ];
+    }
+
+
+    public function message()
+    {
+        return [];
+    }
+}

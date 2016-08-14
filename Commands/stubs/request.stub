@@ -1,17 +1,35 @@
 <?php namespace $NAMESPACE$;
 
-use Illuminate\Foundation\Http\FormRequest;
+use Validator;
+use App\Http\Requests\Request;
+use Response;
 
-class $CLASS$ extends FormRequest {
+class $CLASS$ extends Request {
 
 	/**
-	 * Determine if the user is authorized to make this request.
+	 * ProductRequest constructor.
 	 *
-	 * @return bool
+	 * @param array $query
+	 * @param array $request
+	 * @param array $attributes
+	 * @param array $cookies
+	 * @param array $files
+	 * @param array $server
+	 * @param null $content
 	 */
-	public function authorize()
-	{
-		return true;
+	public function __construct (
+		array $query = array(),
+		array $request = array(),
+		array $attributes = array(),
+		array $cookies = array(),
+		array $files = array(),
+		array $server = array(),
+		$content = null
+	) {
+
+		$this->customValidations();
+		parent::__construct($query, $request, $attributes, $cookies, $files, $server, $content);
+
 	}
 
 	/**
@@ -21,9 +39,41 @@ class $CLASS$ extends FormRequest {
 	 */
 	public function rules()
 	{
-		return [
-			//
-		];
+		switch($this->method()) {
+			case 'GET':
+			case 'DELETE': {
+				return [ ];
+			}
+			case 'POST': {
+				return [
+
+				];
+			}
+			case 'PUT':
+			case 'PATCH': {
+				return [
+
+				];
+			}
+			default:
+				break;
+		}
+    }
+
+    public function customAttributes()
+    {
+        return [];
+    }
+
+	public function message()
+	{
+		return [];
 	}
 
+	protected function customValidations ()
+	{
+		\Validator::extend('foo', function($attribute, $value, $parameters, $validator) {
+			return $value == 'foo';
+		});
+	}
 }
