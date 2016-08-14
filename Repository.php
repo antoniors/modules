@@ -3,7 +3,7 @@
 namespace Herosoft\Modules;
 
 use Countable;
-use Illuminate\Foundation\Application;
+use Laravel\Lumen\Application;
 use Illuminate\Support\Str;
 use Herosoft\Modules\Contracts\RepositoryInterface;
 use Herosoft\Modules\Exceptions\ModuleNotFoundException;
