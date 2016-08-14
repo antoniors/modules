@@ -1,8 +1,8 @@
-<?php namespace Modules\$STUDLY_NAME$\Repositories;
+<?php namespace App\Modules\$STUDLY_NAME$\Repositories;
 
 use App\Repositories\Repository;
 
-class $STUDLY_NAME$Repositorio extends Repository {
+class $STUDLY_NAME$Repository extends Repository {
 
     protected $campos = ['*'];
     /**
@@ -12,7 +12,7 @@ class $STUDLY_NAME$Repositorio extends Repository {
      */
     function model()
     {
-        return 'Modules\$STUDLY_NAME$\Entities\$STUDLY_NAME$';
+        return 'App\Modules\$STUDLY_NAME$\Entities\$STUDLY_NAME$';
     }
 
     public function listar() {

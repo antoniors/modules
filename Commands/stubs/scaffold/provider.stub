@@ -1,4 +1,4 @@
-<?php namespace Modules\$MODULENAME$\Providers;
+<?php namespace App\Modules\$STUDLY_NAME$\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -41,10 +41,10 @@ class $CLASS$ extends ServiceProvider {
         protected function registerConfig()
         {
             $this->publishes([
-                __DIR__.'/../Config/config.php' => config_path('$MODULENAME$.php'),
+                __DIR__.'/../Config/config.php' => config_path('$STUDLY_NAME$.php'),
             ]);
             $this->mergeConfigFrom(
-                __DIR__.'/../Config/config.php', '$MODULENAME$'
+                __DIR__.'/../Config/config.php', '$STUDLY_NAME$'
             );
         }
 
@@ -55,7 +55,7 @@ class $CLASS$ extends ServiceProvider {
          */
         public function registerViews()
         {
-            $viewPath = base_path('modules/$MODULENAME$/Resources/views');
+            $viewPath = base_path('modules/$STUDLY_NAME$/Resources/views');
 
             $sourcePath = __DIR__.'/../Resources/views';
 
@@ -63,7 +63,7 @@ class $CLASS$ extends ServiceProvider {
                 $sourcePath => $viewPath
             ]);
 
-            $this->loadViewsFrom([$viewPath, $sourcePath], '$MODULENAME$');
+            $this->loadViewsFrom([$viewPath, $sourcePath], '$STUDLY_NAME$');
         }
 
         /**
@@ -73,12 +73,12 @@ class $CLASS$ extends ServiceProvider {
          */
         public function registerTranslations()
         {
-            $langPath = base_path('resources/lang/modules/$MODULENAME$');
+            $langPath = base_path('resources/lang/modules/$STUDLY_NAME$');
 
             if (is_dir($langPath)) {
-                $this->loadTranslationsFrom($langPath, '$MODULENAME$');
+                $this->loadTranslationsFrom($langPath, '$STUDLY_NAME$');
             } else {
-                $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', '$MODULENAME$');
+                $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', '$STUDLY_NAME$');
             }
         }
 

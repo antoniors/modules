@@ -1,8 +1,8 @@
-<?php namespace Modules\$MODULENAME$\Http\Requests;
+<?php namespace App\Modules\$STUDLY_NAME$\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class $MODULENAME$Validate extends Request {
+class $STUDLY_NAME$Validate extends Request {
 
     /**
      * Get the validation rules that apply to the request.

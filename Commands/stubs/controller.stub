@@ -3,165 +3,25 @@
 use Pingpong\Modules\Routing\Controller;
 use Illuminate\Http\Request;
 use Response;
-use Modules\$MODULENAME$\Negocy\$MODULENAME$Negocio;
-use Lang;
-use Modules\$MODULENAME$\Http\Requests\$MODULENAME$Request;
-
-use Modules\$MODULENAME$\Repositories\$MODULENAME$Repositorio;
-use App\Exceptions\ResponseException;
+use App\Http\Controllers\RestControllerTrait;
+use Modules\$STUDLY_NAME$\Repositories\$STUDLY_NAME$Repository;
 
 /**
- * Class $MODULENAME$Controller
- * @package Modules\$MODULENAME$\Http\Controllers
+ * Class $STUDLY_NAME$Controller
+ * @package App\Modules\$STUDLY_NAME$\Http\Controllers
  */
 class $CLASS$ extends Controller
 {
 
-    protected $$LOWER_NAME$Negocio;
-    protected $$LOWER_NAME$Repositorio;
-
-    public function __construct ( $MODULENAME$Negocio $$LOWER_NAME$Negocio, $STUDLY_NAME$Repositorio $$LOWER_NAME$Repositorio) {
-
-        $this->$LOWER_NAME$Negocio = $$LOWER_NAME$Negocio;
-        $this->$LOWER_NAME$Repositorio = $$LOWER_NAME$Repositorio;
-
-    }
-
-    /**
-     * Index
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index () {
-        return view('$MODULENAME$::index');
-    }
-
-    /**
-     * Mostrar el formulario para crear un nuevo recurso
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function crear () {
-        return view('$MODULENAME$::$LOWER_NAME$');
-    }
-
-    /**
-     * Metodo para el registro
-     *
-     * @param $MODULENAME$Request $request
-     *
-     * @return mixed
-     * @throws ResponseException
-     */
-    public function registrar ( $MODULENAME$Request $request) {
-
-        try {
-            if ( $request->validate() ) {
-
-                $this->$LOWER_NAME$Negocio->registrar($request->all());
-                return response()->success([
-                    'message' => trans('$STUDLY_NAME$::$STUDLY_NAME$.registroCorrecto')
-                ]);
-
-            } else {
-                return response()->validate([ 'message' => $request->errors() ]);
-            }
-
-        } catch ( \Exception $e ) {
-            return response()->error([
-                'message' => trans('$STUDLY_NAME$::$STUDLY_NAME$.registroErroneo'),
-                'error' => $e
-            ],500);
-        }
-    }
-
-    /**
-     * Metodo para obtener un registro especificado por id
-     *
-     * @param int $id
-     *
-     * @return mixed
-     */
-    public function obtener ( $id ) {
-        return response()->json($this->$LOWER_NAME$Repositorio->find($id));
-    }
+    use RestControllerTrait;
 
 
-    /**
-     * Metodo para el listado de registros
-     *
-     * @return mixed
-     */
-    public function listar ( $MODULENAME$Request $request ) {
-        return response()->json($this->$LOWER_NAME$Repositorio->paginate());
-    }
+    protected $$LOWER_NAME$Service;
+    protected $$LOWER_NAME$Repository;
 
-    /**
-     * Mostrar el formulario para editar el recurso especificado por id
-     *
-     * @param  int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function editar ( $id )
+    public function __construct(Request $request)
     {
-        return view('$MODULENAME$::$LOWER_NAME$', [
-            '$LOWER_NAME$' => $this->$LOWER_NAME$Repositorio->find($id)
-        ]);
-    }
-
-    /**
-     * Metodo para la actualización de un registro especificado por id
-     *
-     * @param $MODULENAME$Request $request
-     * @param int $id
-     *
-     * @return mixed
-     * @throws ResponseException
-     */
-    public function actualizar ( $MODULENAME$Request $request, $id) {
-
-        try {
-            if ( $request->validate() ) {
-
-                $this->$LOWER_NAME$Negocio->actualizar($request->all(), $id);
-                return response()->success([
-                    'message' => trans('$STUDLY_NAME$::$STUDLY_NAME$.actualizacionCorrecta')
-                ]);
-
-            } else {
-                return response()->validate([ 'message' => $request->errors() ]);
-            }
-
-        } catch ( \Exception $e ) {
-            return response()->error([
-                'message' => trans('$STUDLY_NAME$::$STUDLY_NAME$.actualizacionErronea'),
-                'error' => $e
-            ],500);
-        }
-    }
-
-    /**
-     * Metodo para la eliminación (Cancelacion) de un registro especificado por un id
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function eliminar ( $id ) {
-
-        try {
-
-            $this->$LOWER_NAME$Negocio->eliminar($id);
-            return response()->success([
-                'message' => trans('$STUDLY_NAME$::$STUDLY_NAME$.eliminadoCorrecto')
-            ]);
-
-        } catch ( Exception $e ) {
-            return response()->error([
-                'message' => trans('$STUDLY_NAME$::$STUDLY_NAME$.eliminadoErroneo'),
-                'error' => $e
-            ],500);
-        }
+        $this->addModuleNamespace('$STUDLY_NAME$\$STUDLY_NAME$');
+        $this->request = $request;
     }
 }
