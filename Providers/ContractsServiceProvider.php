@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Providers;
+namespace Herosoft\Modules\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -12,8 +12,8 @@ class ContractsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            'Pingpong\Modules\Contracts\RepositoryInterface',
-            'Pingpong\Modules\Repository'
+            'Herosoft\Modules\Contracts\RepositoryInterface',
+            'Herosoft\Modules\Repository'
         );
     }
 }

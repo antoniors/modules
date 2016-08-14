@@ -1,10 +1,10 @@
 <?php
 
-namespace Pingpong\Modules\Process;
+namespace Herosoft\Modules\Process;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use Pingpong\Modules\Repository;
+use Herosoft\Modules\Repository;
 use Symfony\Component\Process\Process;
 
 class Installer
@@ -26,7 +26,7 @@ class Installer
     /**
      * The module repository instance.
      *
-     * @var \Pingpong\Modules\Repository
+     * @var \Herosoft\Modules\Repository
      */
     protected $repository;
 
@@ -84,7 +84,7 @@ class Installer
     /**
      * Set the module repository instance.
      *
-     * @param \Pingpong\Modules\Repository $repository
+     * @param \Herosoft\Modules\Repository $repository
      *
      * @return $this
      */

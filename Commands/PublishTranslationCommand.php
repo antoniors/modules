@@ -1,10 +1,10 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace Herosoft\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Pingpong\Modules\Module;
-use Pingpong\Modules\Publishing\LangPublisher;
+use Herosoft\Modules\Module;
+use Herosoft\Modules\Publishing\LangPublisher;
 use Symfony\Component\Console\Input\InputArgument;
 
 class PublishTranslationCommand extends Command

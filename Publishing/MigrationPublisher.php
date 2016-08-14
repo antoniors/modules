@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Publishing;
+namespace Herosoft\Modules\Publishing;
 
 class MigrationPublisher extends AssetPublisher
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Pingpong\Modules\Migrations;
+namespace Herosoft\Modules\Migrations;
 
-use Pingpong\Modules\Module;
+use Herosoft\Modules\Module;
 
 class Migrator
 {
     /**
      * Pingpong Module instance.
      *
-     * @var \Pingpong\Modules\Module
+     * @var \Herosoft\Modules\Module
      */
     protected $module;
 
@@ -23,7 +23,7 @@ class Migrator
     /**
      * Create new instance.
      *
-     * @param \Pingpong\Modules\Module $module
+     * @param \Herosoft\Modules\Module $module
      */
     public function __construct(Module $module)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Routing;
+namespace Herosoft\Modules\Routing;
 
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;

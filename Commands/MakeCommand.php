@@ -1,9 +1,9 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace Herosoft\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Pingpong\Modules\Generators\ModuleGenerator;
+use Herosoft\Modules\Generators\ModuleGenerator;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

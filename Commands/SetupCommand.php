@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace Herosoft\Modules\Commands;
 
 use Illuminate\Console\Command;
 

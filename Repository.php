@@ -1,14 +1,14 @@
 <?php
 
-namespace Pingpong\Modules;
+namespace Herosoft\Modules;
 
 use Countable;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Str;
-use Pingpong\Modules\Contracts\RepositoryInterface;
-use Pingpong\Modules\Exceptions\ModuleNotFoundException;
-use Pingpong\Modules\Process\Installer;
-use Pingpong\Modules\Process\Updater;
+use Herosoft\Modules\Contracts\RepositoryInterface;
+use Herosoft\Modules\Exceptions\ModuleNotFoundException;
+use Herosoft\Modules\Process\Installer;
+use Herosoft\Modules\Process\Updater;
 
 class Repository implements RepositoryInterface, Countable
 {

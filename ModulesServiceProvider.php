@@ -1,10 +1,10 @@
 <?php
 
-namespace Pingpong\Modules;
+namespace Herosoft\Modules;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
-use Pingpong\Support\Stub;
+use Herosoft\Support\Stub;
 
 class ModulesServiceProvider extends ServiceProvider
 {
@@ -30,7 +30,7 @@ class ModulesServiceProvider extends ServiceProvider
      */
     protected function registerModules()
     {
-        $this->app->register('Pingpong\Modules\Providers\BootstrapServiceProvider');
+        $this->app->register('Herosoft\Modules\Providers\BootstrapServiceProvider');
     }
 
     /**
@@ -79,7 +79,7 @@ class ModulesServiceProvider extends ServiceProvider
         $aliases = [
             'HTML' => 'Collective\Html\HtmlFacade',
             'Form' => 'Collective\Html\FormFacade',
-            'Module' => 'Pingpong\Modules\Facades\Module',
+            'Module' => 'Herosoft\Modules\Facades\Module',
         ];
 
         AliasLoader::getInstance($aliases)->register();
@@ -113,6 +113,6 @@ class ModulesServiceProvider extends ServiceProvider
     protected function registerProviders()
     {
         $this->app->register(__NAMESPACE__.'\\Providers\\ConsoleServiceProvider');
-        $this->app->register('Pingpong\Modules\Providers\ContractsServiceProvider');
+        $this->app->register('Herosoft\Modules\Providers\ContractsServiceProvider');
     }
 }

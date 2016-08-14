@@ -1,11 +1,11 @@
 <?php
 
-namespace Pingpong\Modules\Publishing;
+namespace Herosoft\Modules\Publishing;
 
 use Illuminate\Console\Command;
-use Pingpong\Modules\Contracts\PublisherInterface;
-use Pingpong\Modules\Module;
-use Pingpong\Modules\Repository;
+use Herosoft\Modules\Contracts\PublisherInterface;
+use Herosoft\Modules\Module;
+use Herosoft\Modules\Repository;
 
 abstract class Publisher implements PublisherInterface
 {
@@ -19,7 +19,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * The modules repository instance.
      *
-     * @var \Pingpong\Modules\Repository
+     * @var \Herosoft\Modules\Repository
      */
     protected $repository;
 
@@ -88,7 +88,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * Get module instance.
      *
-     * @return \Pingpong\Modules\Module
+     * @return \Herosoft\Modules\Module
      */
     public function getModule()
     {
@@ -98,7 +98,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * Set modules repository instance.
      *
-     * @param \Pingpong\Modules\Repository $repository
+     * @param \Herosoft\Modules\Repository $repository
      *
      * @return $this
      */
@@ -112,7 +112,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * Get modules repository instance.
      *
-     * @return \Pingpong\Modules\Repository
+     * @return \Herosoft\Modules\Repository
      */
     public function getRepository()
     {

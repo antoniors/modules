@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Traits;
+namespace Herosoft\Modules\Traits;
 
 trait ModuleCommandTrait
 {

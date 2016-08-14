@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Generators;
+namespace Herosoft\Modules\Generators;
 
 abstract class Generator
 {

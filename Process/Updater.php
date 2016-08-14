@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Process;
+namespace Herosoft\Modules\Process;
 
 class Updater extends Runner
 {

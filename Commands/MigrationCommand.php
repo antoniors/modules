@@ -1,12 +1,12 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace Herosoft\Modules\Commands;
 
 use Illuminate\Support\Str;
-use Pingpong\Generators\Migrations\NameParser;
-use Pingpong\Generators\Migrations\SchemaParser;
-use Pingpong\Support\Stub;
-use Pingpong\Modules\Traits\ModuleCommandTrait;
+use Herosoft\Generators\Migrations\NameParser;
+use Herosoft\Generators\Migrations\SchemaParser;
+use Herosoft\Support\Stub;
+use Herosoft\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

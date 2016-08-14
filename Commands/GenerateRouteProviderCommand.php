@@ -1,9 +1,9 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace Herosoft\Modules\Commands;
 
-use Pingpong\Support\Stub;
-use Pingpong\Modules\Traits\ModuleCommandTrait;
+use Herosoft\Support\Stub;
+use Herosoft\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 
 class GenerateRouteProviderCommand extends GeneratorCommand

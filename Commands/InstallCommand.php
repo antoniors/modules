@@ -1,10 +1,10 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace Herosoft\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Pingpong\Modules\Process\Installer;
-use Pingpong\Support\Json;
+use Herosoft\Modules\Process\Installer;
+use Herosoft\Support\Json;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Facades;
+namespace Herosoft\Modules\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

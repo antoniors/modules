@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules;
+namespace Herosoft\Modules;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Foundation\Application;
