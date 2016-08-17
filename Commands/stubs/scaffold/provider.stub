@@ -63,7 +63,7 @@ class $CLASS$ extends ServiceProvider {
                 $sourcePath => $viewPath
             ]);
 
-            $this->loadViewsFrom([$viewPath, $sourcePath], '$STUDLY_NAME$');
+            //$this->loadViewsFrom([$viewPath, $sourcePath], '$STUDLY_NAME$');
         }
 
         /**

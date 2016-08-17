@@ -50,14 +50,6 @@ return [
                 'AUTHOR_EMAIL',
                 'MODULE_NAMESPACE',
             ],
-            'modelService' => [
-                'LOWER_NAME',
-                'STUDLY_NAME',
-                'VENDOR',
-                'AUTHOR_NAME',
-                'AUTHOR_EMAIL',
-                'MODULE_NAMESPACE',
-            ],
             'composer' => [
                 'LOWER_NAME',
                 'STUDLY_NAME',
@@ -115,7 +107,7 @@ return [
             'config' => 'Config',
             'command' => 'Console',
             'migration' => 'Database/Migrations',
-            'model' => 'Entities',
+            'service' => 'Services',
             'repository' => 'Repositories',
             'seeder' => 'Database/Seeders',
             'controller' => 'Http/Controllers',

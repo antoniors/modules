@@ -328,6 +328,16 @@ class ModuleGenerator extends Generator
             'controller' => $this->getName().'Controller',
             'module' => $this->getName(),
         ]);
+
+        $this->console->call('module:make-model', [
+            'model' => $this->getName(),
+            'module' => $this->getName(),
+        ]);
+
+        $this->console->call('module:make-service', [
+            'service' => $this->getName(),
+            'module' => $this->getName(),
+        ]);
     }
 
     /**

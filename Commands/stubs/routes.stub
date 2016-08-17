@@ -1,5 +1,5 @@
 <?php
 
-$app->group(['middleware' => 'web', 'prefix' => '$STUDLY_NAME$/', 'namespace' => '$MODULE_NAMESPACE$$STUDLY_NAME$\Http\Controllers'], function() {
+app()->group(['middleware' => 'web', 'prefix' => '$STUDLY_NAME$/', 'namespace' => '$MODULE_NAMESPACE$$STUDLY_NAME$\Http\Controllers'], function() {
     rest('/', '$STUDLY_NAME$Controller');
 });
