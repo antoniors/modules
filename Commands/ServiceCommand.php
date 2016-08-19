@@ -100,6 +100,6 @@ class ServiceCommand extends GeneratorCommand
      */
     public function getDefaultNamespace()
     {
-        return 'Http\Services';
+        return 'Service';
     }
 }
