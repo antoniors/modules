@@ -1,10 +1,7 @@
 <?php
 
 return [
-    'registroCorrecto' => 'La $STUDLY_NAME$ se ha registrado correctamente',
-    'registroErroneo' => 'Ha ocurrido un error al intentar guardar la $STUDLY_NAME$ intentelo mas tarde',
-    'actualizacionCorrecta' => 'La $STUDLY_NAME$ se ha cancelado correctamente',
-    'actualizacionErronea' => 'Ha ocurrido un error al intentar cancelar la $STUDLY_NAME$ intentelo mas tarde',
-    'eliminadoCorrecto' => 'La $STUDLY_NAME$ se ha sido actualizado correctamente',
-    'eliminadoErroneo' => 'Ha ocurrido un error al intentar actualizar la $STUDLY_NAME$ intentelo mas tarde'
+    'store' => 'La $STUDLY_NAME$ se ha registrado correctamente',
+    'delete' => 'La $STUDLY_NAME$ se ha cancelado correctamente',
+    'update' => 'La $STUDLY_NAME$ se ha sido actualizado correctamente'
 ];

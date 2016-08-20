@@ -2,7 +2,7 @@
 
 use Pingpong\Modules\Routing\Controller;
 use Illuminate\Http\Request;
-use Response;
+use Illuminate\Http\Response;
 use App\Http\Controllers\RestControllerTrait;
 use Modules\$STUDLY_NAME$\Repositories\$STUDLY_NAME$Repository;
 
@@ -14,7 +14,6 @@ class $CLASS$ extends Controller
 {
 
     use RestControllerTrait;
-
 
     protected $$LOWER_NAME$Service;
     protected $$LOWER_NAME$Repository;

@@ -79,5 +79,4 @@ class $STUDLY_NAME$Service implements ServiceInterface {
             ['estatus' => 'CA'] , $id
         );
     }
-
 }

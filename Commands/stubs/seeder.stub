@@ -15,5 +15,4 @@ class $NAME$ extends Seeder {
         Model::unguard();
         // $this->call("OthersTableSeeder");
     }
-
 }
