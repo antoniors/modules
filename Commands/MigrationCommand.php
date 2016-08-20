@@ -152,6 +152,6 @@ class MigrationCommand extends GeneratorCommand
     {
         parent::fire();
 
-        $this->call('optimize');
+        //$this->call('optimize');
     }
 }
