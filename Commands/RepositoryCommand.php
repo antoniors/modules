@@ -6,7 +6,7 @@ use Herosoft\Modules\Stub;
 use Herosoft\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 
-class ServiceCommand extends GeneratorCommand
+class RepositoryCommand extends GeneratorCommand
 {
     use ModuleCommandTrait;
 
@@ -42,7 +42,7 @@ class ServiceCommand extends GeneratorCommand
 
         $servicePath = $this->laravel['modules']->config('paths.generator.repository');
 
-        return $path.$servicePath.'/'.$this->getServiceName().'.php';
+        return $path.$servicePath.'/'.$this->getRepositoryName().'.php';
     }
 
     /**
@@ -54,7 +54,7 @@ class ServiceCommand extends GeneratorCommand
 
         return (new Stub('/repository.stub', [
             'MODULENAME'        => $module->getStudlyName(),
-            'CONTROLLERNAME'    => $this->getServiceName(),
+            'CONTROLLERNAME'    => $this->getRepositoryName(),
             'NAMESPACE'         => $module->getStudlyName(),
             'CLASS_NAMESPACE'   => $this->getClassNamespace($module),
             'CLASS'             => $this->getClass(),
@@ -82,7 +82,7 @@ class ServiceCommand extends GeneratorCommand
     /**
      * @return array|string
      */
-    protected function getServiceName()
+    protected function getRepositoryName()
     {
         $service = studly_case($this->argument('repository'));
 
