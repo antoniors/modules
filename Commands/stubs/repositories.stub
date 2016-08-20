@@ -2,11 +2,21 @@
 
 use App\Repositories\Repository;
 
+/**
+ * Class $STUDLY_NAME$Repository
+ *
+ * @package  $STUDLY_NAME$
+ * @category Service
+ */
 class $STUDLY_NAME$Repository extends Repository {
 
     protected $campos = ['*'];
+
     /**
      * Specify Model class name
+     *
+     * @package  $STUDLY_NAME$
+     * @category Repository
      *
      * @return mixed
      */
@@ -15,7 +25,17 @@ class $STUDLY_NAME$Repository extends Repository {
         return 'App\Modules\$STUDLY_NAME$\Entities\$STUDLY_NAME$';
     }
 
-    public function listar() {
-        return $this->model->select($this->campos);
+    /**
+     * Set query base
+     *
+     * @package  $STUDLY_NAME$
+     * @category Repository
+     *
+     * @return mixed
+     */
+    public function queryBase()
+    {
+        return $this->getModel()
+            ->select($this->select);
     }
 }

@@ -45,6 +45,7 @@ class ConsoleServiceProvider extends ServiceProvider
         'Publish',
         'PublishMigration',
         'PublishTranslation',
+        'Repository',
         'Seed',
         'SeedMake',
         'Service',

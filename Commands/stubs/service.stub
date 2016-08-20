@@ -1,12 +1,14 @@
 <?php namespace App\Modules\$STUDLY_NAME$\Services;
 
-use App\Modules\$STUDLY_NAME$\Entities\$STUDLY_NAME$;
+use App\Modules\$STUDLY_NAME$\$STUDLY_NAME$;
 use App\Services\ServiceInterface;
 use App\Modules\$STUDLY_NAME$\Repositories\$STUDLY_NAME$Repository;
 
 /**
  * Class $STUDLY_NAME$Service
- * @package App\Modules\$STUDLY_NAME$\Services
+ *
+ * @package  $STUDLY_NAME$
+ * @category Service
  */
 class $STUDLY_NAME$Service implements ServiceInterface {
 
@@ -15,55 +17,67 @@ class $STUDLY_NAME$Service implements ServiceInterface {
     /**
      * $STUDLY_NAME$Service constructor.
      * @param $STUDLY_NAME$Repository $$LOWER_NAME$Repository
+     *
+     * @package  $STUDLY_NAME$
+     * @category Service
+     *
      */
-    public function __construct($STUDLY_NAME$Repository $$LOWER_NAME$Repository) {
+    public function __construct($STUDLY_NAME$Repository $$LOWER_NAME$Repository)
+    {
         $this->$LOWER_NAME$Repository = $$LOWER_NAME$Repository;
     }
 
     /**
-     * Accion para el registro de los datos
+     * Store a newly created resource in storage.
      *
      * @param $request
+     *
+     * @package  $STUDLY_NAME$
+     * @category Service
+     *
      * @return mixed
      */
-    public function registrar( $request) {
-
-        return $this->$$LOWER_NAME$Repository->create(
+    public function store($request)
+    {
+        return $this->$LOWER_NAME$Repository->create(
             $request
         );
-
     }
 
     /**
-     * Accion para la actualización de los datos especificando un id
+     * Update the specified resource in storage.
      *
      * @param $request
      * @param $id
+     *
+     * @package  $STUDLY_NAME$
+     * @category Service
+     *
      * @return mixed
      */
-    public function actualizar( $request, $id) {
-
-
-        return $this->$$LOWER_NAME$Repository->update(
+    public function update($request, $id)
+    {
+        return $this->$LOWER_NAME$Repository->update(
             $request , $id
         );
-
-
     }
 
     /**
-     * Accion para la eliminación (cancelacion) de los datos especificando un id
+     * Remove the specified resource from storage.
      *
      * @param $request
      * @param $id
+     *
+     * @package  $STUDLY_NAME$
+     * @category Service
+     *
      * @return mixed
      */
-    public function eliminar($id){
-
-            return $this->$$LOWER_NAME$Repository->update(
-                ['estatus' => 'CA'] , $id
-            );
-
+    public function delete($id)
+    {
+        return $this->$$LOWER_NAME$Repository->update(
+            ['estatus' => 'CA'] , $id
+        );
     }
 
 }
