@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Generators\Migrations;
+namespace Herosoft\Modules\Migrations;
 
 class NameParser
 {
