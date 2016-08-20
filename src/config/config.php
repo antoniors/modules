@@ -95,7 +95,7 @@ return [
         |
         */
 
-        //'assets' => public_path('modules'),
+        'assets' => base_path('../nw/app/modules'),
         /*
         |--------------------------------------------------------------------------
         | The migrations path
