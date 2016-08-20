@@ -338,6 +338,11 @@ class ModuleGenerator extends Generator
             'service' => $this->getName(),
             'module' => $this->getName(),
         ]);
+
+        $this->console->call('module:make-repository', [
+            'repository' => $this->getName(),
+            'module' => $this->getName(),
+        ]);
     }
 
     /**
